@@ -1,0 +1,6 @@
+@miupetshop_HostAddress = http://localhost:5083
+
+GET {{miupetshop_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
