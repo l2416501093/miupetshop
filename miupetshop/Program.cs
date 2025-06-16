@@ -18,12 +18,13 @@ namespace miupetshop
             builder.Services.AddSwaggerGen();
             builder.Services.Configure<MongoDBSettings>(
             builder.Configuration.GetSection("MongoDBSettings"));
+            builder.Services.AddSingleton<UserService>();
             builder.Services.AddSingleton<CommentService>();
 
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
-            if (app.Environment.IsDevelopment())
+            //if (app.Environment.IsDevelopment())
             {
                 app.UseSwagger();
                 app.UseSwaggerUI();
