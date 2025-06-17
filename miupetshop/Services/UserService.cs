@@ -33,6 +33,22 @@ namespace miupetshop.Services
                 .FirstOrDefaultAsync();
             return user;
         }
+
+        public async Task<User?> GetUserByUsernameAsync(string username)
+        {
+            var user = await _usersCollection
+                .Find(u => u.Username == username)
+                .FirstOrDefaultAsync();
+            return user;
+        }
+
+        public async Task<User?> GetUserByEmailAsync(string email)
+        {
+            var user = await _usersCollection
+                .Find(u => u.Email == email)
+                .FirstOrDefaultAsync();
+            return user;
+        }
     }
 
 }
