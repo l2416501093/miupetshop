@@ -17,5 +17,14 @@ namespace miupetshop.Models
 
         [BsonElement("image")]
         public string Image { get; set; }
+
+        [BsonElement("price")]
+        public decimal Price { get; set; }
+
+        [BsonElement("discountPercentage")]
+        public decimal DiscountPercentage { get; set; }
+
+        [BsonElement("discountedPrice")]
+        public decimal DiscountedPrice { get; set; }
     }
 } 

@@ -71,6 +71,9 @@ namespace miupetshop.Controllers
                 return BadRequest(new { message = "Geçerli bir e-posta adresi giriniz!" });
             }
 
+            // Yeni kullanıcılar için isAdmin false olarak set et
+            user.IsAdmin = false;
+
             await _userService.CreateUserAsync(user);
             return Ok(new { message = "Kullanıcı başarıyla eklendi!" });
         }
@@ -97,19 +100,21 @@ namespace miupetshop.Controllers
                 return Unauthorized(new { message = "Kullanıcı adı veya şifre hatalı!" });
             }
 
-            // Return user info without password for security
+            // Return all user info without password for security
             var userResponse = new
             {
                 Id = user.Id,
                 Username = user.Username,
                 Email = user.Email,
                 Address = user.Address,
-                Tcno = user.Tcno
+                Tcno = user.Tcno,
+                IsAdmin = user.IsAdmin
             };
 
             return Ok(new { 
                 message = "Giriş başarılı!", 
-                user = userResponse 
+                user = userResponse,
+                success = true
             });
         }
     }

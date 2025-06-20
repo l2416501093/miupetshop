@@ -29,8 +29,8 @@ namespace miupetshop
             builder.Services.Configure<MongoDBSettings>(
             builder.Configuration.GetSection("MongoDBSettings"));
             builder.Services.AddSingleton<UserService>();
-            builder.Services.AddSingleton<CommentService>();
             builder.Services.AddSingleton<ProductService>();
+            builder.Services.AddSingleton<OrderService>();
 
             // HTTP hosting için URL konfigürasyonu - Network erişimi için
             builder.WebHost.UseUrls("http://0.0.0.0:8080", "https://0.0.0.0:5001");

@@ -22,6 +22,9 @@ namespace miupetshop.Models
 
         [BsonElement("tcno")]
         public string Tcno { get; set; }
+
+        [BsonElement("isAdmin")]
+        public bool IsAdmin { get; set; }
     }
 
 }
