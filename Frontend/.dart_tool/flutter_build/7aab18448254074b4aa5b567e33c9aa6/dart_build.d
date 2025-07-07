@@ -1,0 +1,1 @@
+ C:\\Users\\cetin.tozkoparan\\StudioProjects\\shoppy\\.dart_tool\\flutter_build\\7aab18448254074b4aa5b567e33c9aa6\\dart_build_result.json: 

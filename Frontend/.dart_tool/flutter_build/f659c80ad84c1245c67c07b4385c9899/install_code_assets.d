@@ -1,0 +1,1 @@
+ C:\\Users\\cetin.tozkoparan\\StudioProjects\\shoppy\\.dart_tool\\flutter_build\\f659c80ad84c1245c67c07b4385c9899\\native_assets.json: 
